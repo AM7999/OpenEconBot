@@ -132,10 +132,10 @@ async def purchaseItem(ctx, item):
     return
   
   newBalance = user["balance"] - itemData["price"]
-  user['inventory'] = json.loads(user['inventory'])
-  user['inventory'].append(itemData['id'])
+  tempInv = json.loads(user['inventory'])
+  tempInv.append(itemData['id'])
   conn.execute("UPDATE users SET balance = ? WHERE user_id = ?", (newBalance,ctx.author.id,))
-  conn.execute("UPDATE users SET inventory = ? WHERE user_id = ?", (json.dumps(user['inventory']), ctx.author.id,))
+  conn.execute("UPDATE users SET inventory = ? WHERE user_id = ?", (json.dumps(tempInv), ctx.author.id,))
   conn.commit()
   await ctx.send(f"You have purchased: {itemData['name']} for ${itemData['price']}! Your new balance is ${newBalance}.")
 
@@ -170,6 +170,25 @@ async def register(ctx):
   print(f"{elapsed:.2f}")
 
   await ctx.send(f"registered: {ctx.author.id}.")
+
+@bot.command()
+async def getInventory(ctx, user = None):
+  if user == None:
+    user = ctx.author.id
+  conn = getDB(ctx.guild.id)
+  existed = conn.execute("SELECT * FROM users WHERE user_id = ?",(user,)).fetchone()
+  
+  if not existed:
+    await ctx.send("You need to !register to have an inventory!")
+    return
+  
+  msg = ""
+  for item in json.loads(existed['inventory']):
+    msg += f" {item}"
+  
+  await ctx.send(f"{msg}")
+  
+
 
 @bot.command()
 async def delete(ctx, userid):
