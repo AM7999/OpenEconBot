@@ -1,15 +1,109 @@
 {
     "items": [
-        {"name": "testItem","id": "testitem","desc": "A simple placeholder.. wait why do you have this","price": 3.0, "nsfw": false},
-        {"name": "Garbolium","id": "garbolium","desc": "Think of it if trash was a rare earth metal","price": 1.0, "nsfw": false},
-        {"name": "Nail Clippers","id": "nail_clippers","desc": "A decent pair of nail clippers. They have a heft to them","price": 4.0, "nsfw": false},
-        {"name": "Echo Show 8","id": "echo_show_8","desc": "A gateway for jeff bazos in your home... why would you want this","price": 90.0, "nsfw": false},
-        {"name": "Body Pillow","id": "body_pillow","desc": "A body pillow with the image of a furry on it... it smells..","price": 30.0, "nsfw": false},
-        {"name": "Frying Pan","id": "frying_pan","desc": "A Simple cast iron frying pan. Its sturdy","price": 10.0, "nsfw": false},
-        {"name": "MIKU BINDER YEAHHHHHHHHH","id": "miku_binder","desc": "Its a compression binder, commonly used by transmascs. It has little emblems of miku on it","price": 30.0, "nsfw": false},
-        {"name": "Lemon","id": "lemon","desc":"A single, perfectly grown lemon. Nothing to complain about here","price": 0.89, "nsfw": false},
-        {"name": "Crest Mouthwash", "id": "crest_mouthwash","desc": "A single container of some real spicy mouthwash","price": 5.29, "nsfw": false},
-        {"name": "Milk","id": "milk","desc": "A simple jug of milk. None of whatever those canadian people have...","price": 10.0, "nsfw": false}
-
+        {
+            "name": "testItem",
+            "id": "testitem",
+            "desc": "A simple placeholder.. wait why do you have this",
+            "price": 3.0,
+            "nsfw": false
+        },
+        {
+            "name": "Garbolium",
+            "id": "garbolium",
+            "desc": "Think of it if trash was a rare earth metal",
+            "price": 1.0,
+            "nsfw": false
+        },
+        {
+            "name": "Nail Clippers",
+            "id": "nail_clippers",
+            "desc": "A decent pair of nail clippers. They have a heft to them",
+            "price": 4.0,
+            "nsfw": false
+        },
+        {
+            "name": "Echo Show 8",
+            "id": "echo_show_8",
+            "desc": "A gateway for jeff bazos in your home... why would you want this",
+            "price": 90.0,
+            "nsfw": false
+        },
+        {
+            "name": "Body Pillow",
+            "id": "body_pillow",
+            "desc": "A body pillow with the image of a furry on it... it smells..",
+            "price": 30.0,
+            "nsfw": true
+        },
+        {
+            "name": "Frying Pan",
+            "id": "frying_pan",
+            "desc": "A Simple cast iron frying pan. Its sturdy",
+            "price": 10.0,
+            "nsfw": false
+        },
+        {
+            "name": "MIKU BINDER YEAHHHHHHHHH",
+            "id": "miku_binder",
+            "desc": "Its a compression binder, commonly used by transmascs. It has little emblems of miku on it",
+            "price": 30.0,
+            "nsfw": false
+        },
+        {
+            "name": "Lemon",
+            "id": "lemon",
+            "desc": "A single, perfectly grown lemon. Nothing to complain about here",
+            "price": 0.89,
+            "nsfw": false
+        },
+        {
+            "name": "Crest Mouthwash",
+            "id": "crest_mouthwash",
+            "desc": "A single container of some real spicy mouthwash",
+            "price": 5.29,
+            "nsfw": false
+        },
+        {
+            "name": "Milk",
+            "id": "milk",
+            "desc": "A simple jug of milk. None of whatever those canadian people have...",
+            "price": 10.0,
+            "nsfw": false
+        },
+        {
+            "name": "Bowfin Fossil",
+            "id": "bowfin_fossil",
+            "desc": "..why would you even want a fossil??",
+            "price": 18500000.0,
+            "nsfw": false
+        },
+        {
+            "name": "Paperclip",
+            "id": "paperclip",
+            "desc": "A pretty average, yet surprisingly a perferated paperclip",
+            "price": 40.0,
+            "nsfw": false
+        },
+        {
+            "name": "Air Fryer",
+            "id": "air_fryer",
+            "desc": "The best desktop oven you'll ever buy. Forget about that microwave",
+            "price": 129.99,
+            "nsfw": false
+        },
+        {
+            "name": "Used tampon",
+            "id": "used_tampon",
+            "desc": "Ewwww... its bloody...",
+            "price": 0.1,
+            "nsfw": false
+        },
+        {
+            "name": "Preorder for Twisted Dandy plushie",
+            "id": "preorder_for_twisted_dandy_plushie",
+            "desc": "It's not the plushie itself but a reservation... oh boy.. how long do i have to wait for",
+            "price": 35.5,
+            "nsfw": false
+        }
     ]
 }
