@@ -1,0 +1,6 @@
+[tools]
+python = "latest"
+
+[tasks.test]
+description = "Run the unit tests"
+run = "venv/bin/python -m unittest discover -s tests -v"

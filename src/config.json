@@ -3,7 +3,8 @@
         {
             "gid": 1511493556353761410,
             "enableNSFW": true,
-            "admins": []
+            "admins": [],
+            "items": "items_test.json"
         }
     ]
 }

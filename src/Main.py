@@ -5,6 +5,8 @@ import os
 import sqlite3
 import time
 
+from econCommands import Economy
+
 import asyncio
 import signal
 import json
@@ -26,6 +28,8 @@ with open("config.json", "r") as file:
   config = json.load(file)
   config["guild_settings"].sort(key=lambda x: x["gid"])
   settings = config
+
+print(settings)
 
 def initDB(conn: sqlite3.Connection):
   conn.execute("""
@@ -58,6 +62,12 @@ async def shutdown():
   print("stopping")
   saveAlldbs()
   await bot.close()
+
+async def isNsfwAllowed(gid: str) -> bool:
+  for i in range(len(settings['guild_settings'])):
+    if str(settings['guild_settings'][i]['gid']) == str(gid):
+      return True
+  return False
 
 # ! Events ==================
 
@@ -140,6 +150,10 @@ async def purchaseItem(ctx, item):
   await ctx.send(f"You have purchased: {itemData['name']} for ${itemData['price']}! Your new balance is ${newBalance}.")
 
 @bot.command()
+async def getGuildSettings(ctx):
+  print()
+
+@bot.command()
 async def listItems(ctx):
   embedData = json.loads('''{"content":null,"embeds":[{"title":"Items","color":5814783,"fields":[]}],"attachments":[]}''')
   itemList = ""
@@ -187,7 +201,6 @@ async def getInventory(ctx, user = None):
     msg += f" {item}"
   
   await ctx.send(f"{msg}")
-  
 
 
 @bot.command()
@@ -211,10 +224,12 @@ async def clearDB(ctx):
 
 # ! End of Commands =========
 
-token = os.getenv("BOT_TOKEN")
-
-if token is None:
+def main():
+  token = os.getenv("BOT_TOKEN")
+  if token is None:
     print("Please set BOT_TOKEN in .env!")
     exit(1)
+  bot.run(token)
 
-bot.run(token)
+if __name__ == "__main__":
+  main()
